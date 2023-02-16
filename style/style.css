@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:host,
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --font-Red-Hat-Display: "Red Hat Display", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 29rem;
+  display: grid;
+  grid-template-rows: auto;
+  /* gap: 1rem; */
+  text-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: var(--Very-pale-blue);
+  box-shadow: 0 0.5rem 5rem 0 var(--Desaturated-blue);
+  font-family: var(--font-Red-Hat-Display);
+}
+
+.img-music img {
+  width: 100%;
+}
+
+.cont-card {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 3rem;
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.cont-card > p {
+  color: var(--Desaturated-blue);
+  padding: 0 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: hsl(224, 23%, 55%, 0.05);
+  border-radius: 0.5em;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.plan div > img {
+  width: 3.5rem;
+}
+
+.plan > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.plan div > p {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.plan > a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+.plan > a:hover {
+  text-decoration: none;
+  opacity: 75%;
+}
+
+.btn-style {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.btn-style > input {
+  border: none;
+  color: var(--Very-pale-blue);
+  padding: 1rem 0;
+  background-color: var(--Bright-blue);
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 1rem 3rem 0 hsl(245, 75%, 52%, 0.5);
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+.btn-style > input:hover {
+  opacity: 75%;
+}
+
+.btn-style > a {
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  transition: color 0.5s ease-in-out;
+}
+
+.btn-style > a:hover {
+  color: var(--Dark-blue);
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 85%;
+  }
+
+  .cont-card {
+    padding: 1.5rem;
+    font-size: 0.7rem;
+  }
+  .cont-card > p {
+    font-size: 1rem;
+  }
+
+  .plan {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .plan div > img {
+    width: 3rem;
+  }
+  .plan div > h3{
+    font-size: 1rem;
+  }
+  .plan div > p {
+    font-size: 1rem;
+  }
+}
